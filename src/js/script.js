@@ -46,7 +46,6 @@ async function renderCourses(page = 1) {
   paginatedCourses.forEach((course) => {
     const courseItem = document.createElement("li");
     courseItem.classList.add("course-item");
-    courseItem.innerHTML = '';
 
     courseItem.innerHTML = `   
             <img src="${course.photo}" alt="${course.name}">
