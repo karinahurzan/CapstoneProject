@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <title>LearnHub</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="head container">
+        <nav class="head-nav">
+          <a href="index.html" class="head-logo">LearnHub</a>
+          <ul class="head-list">
+            <li><a href="index.html" class="nav-href">Home</a></li>
+            <li>
+              <a href="./src/partials/courses.html" class="nav-href">Courses</a>
+              <ul class="submenu">
+                <li><a href="./src/partials/courses.html?category=IT">IT</a></li>
+                <li>
+                  <a href="./src/partials/courses.html?category=Language">Languages</a>
+                </li>
+                <li>
+                  <a href="./src/partials/courses.html?category=Design">Design</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./src/partials/contacts.html" class="nav-href">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="burger-btn">
+          <svg class="burger-icon" width="28" height="28">
+            <use href="./src/images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container custom-slider">
+          <h2 class="swiper-header">Go through our courses!</h2>
+          <div class="slider-wrapper">
+            <div class="slider">
+              <div class="slide">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="./src/images/slider/slide-photo-desc.jpg" />
+                  <source media="(min-width: 768px)" srcset="./src/images/slider/slide-photo-tab.jpg" />
+                  <source media="(min-width: 375px)" srcset="./src/images/slider/slide-photo-mob.jpg" />
+                  <img src="./src/images/slider/slide-photo-mob.jpg" alt="Slider Photo" class="slider-img" />
+                </picture>
+              </div>
+              <div class="slide">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="./src/images/slider/slide-photo-desc1.jpg" />
+                  <source media="(min-width: 768px)" srcset="./src/images/slider/slide-photo-tab1.jpg" />
+                  <source media="(min-width: 375px)" srcset="./src/images/slider/slide-photo-mob1.jpg" />
+                  <img src="./src/images/slider/slide-photo-mob1.jpg" alt="Slider Photo" class="slider-img" />
+                </picture>
+              </div>
+              <div class="slide">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="./src/images/slider/slide-photo-desc2.jpg" />
+                  <source media="(min-width: 768px)" srcset="./src/images/slider/slide-photo-tab2.jpg" />
+                  <source media="(min-width: 375px)" srcset="./src/images/slider/slide-photo-mob2.jpg" />
+                  <img src="./src/images/slider/slide-photo-mob2.jpg" alt="Slider Photo" class="slider-img" />
+                </picture>
+              </div>
+            </div>
+            <button class="prev-btn">Prev</button>
+            <button class="next-btn">Next</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="footer container">
+        <p class="footer-text">&copy; 2025 LearnHub</p>
+      </div>
+    </footer>
+    <script type="module" src="./src/js/slider.js"></script>
+    <script type="module" src="./src/js/menu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,394 @@
+[
+  {
+    "name": "Introduction to Programming",
+    "teacher": "Dr. Jane Smith",
+    "difficulty": "Beginner",
+    "photo": "../images/courses/course18.webp",
+    "category": "IT",
+    "topics": [
+      "Variables",
+      "Data Types",
+      "Control Structures",
+      "Functions",
+      "Loops"
+    ]
+  },
+  {
+    "name": "Advanced JavaScript",
+    "teacher": "Prof. John Doe",
+    "difficulty": "Advanced",
+    "photo": "../images/courses/course1.webp",
+    "category": "IT",
+    "topics": [
+      "ES6 Features",
+      "Asynchronous Programming",
+      "Promises",
+      "Async/Await",
+      "Event Loop"
+    ]
+  },
+  {
+    "name": "Web Development Fundamentals",
+    "teacher": "Mr. Michael Johnson",
+    "difficulty": "Beginner",
+    "photo": "../images/courses/course2.webp",
+    "category": "IT",
+    "topics": [
+      "HTML",
+      "CSS",
+      "Responsive Design",
+      "JavaScript Basics",
+      "DOM Manipulation"
+    ]
+  },
+  {
+    "name": "Database Management Systems",
+    "teacher": "Dr. Sarah Brown",
+    "difficulty": "Intermediate",
+    "photo": "../images/courses/course4.webp",
+    "category": "IT",
+    "topics": [
+      "Relational Databases",
+      "SQL Queries",
+      "Normalization",
+      "Indexes",
+      "Transactions"
+    ]
+  },
+  {
+    "name": "Python for Data Science",
+    "teacher": "Dr. Olivia Harris",
+    "difficulty": "Beginner",
+    "photo": "../images/courses/course5.webp",
+    "category": "IT",
+    "topics": [
+      "Python Basics",
+      "NumPy",
+      "Pandas",
+      "Data Cleaning",
+      "Data Visualization"
+    ]
+  },
+  {
+    "name": "Artificial Intelligence",
+    "teacher": "Prof. William Adams",
+    "difficulty": "Advanced",
+    "photo": "../images/courses/course6.webp",
+    "category": "IT",
+    "topics": [
+      "Machine Learning",
+      "Neural Networks",
+      "Natural Language Processing",
+      "Computer Vision",
+      "AI Ethics"
+    ]
+  },
+  {
+    "name": "Blockchain Technology",
+    "teacher": "Prof. David Turner",
+    "difficulty": "Advanced",
+    "photo": "../images/courses/course7.webp",
+    "category": "IT",
+    "topics": [
+      "Blockchain Fundamentals",
+      "Cryptography",
+      "Smart Contracts",
+      "Decentralized Applications",
+      "Ethereum"
+    ]
+  },
+  {
+    "name": "Cloud Computing",
+    "teacher": "Dr. Rachel King",
+    "difficulty": "Advanced",
+    "photo": "../images/courses/course8.webp",
+    "category": "IT",
+    "topics": [
+      "Cloud Service Models",
+      "Virtualization",
+      "AWS",
+      "Azure",
+      "Google Cloud"
+    ]
+  },
+  {
+    "name": "Mobile App Development",
+    "teacher": "Dr. Thomas Harris",
+    "difficulty": "Intermediate",
+    "photo": "../images/courses/course9.webp",
+    "category": "IT",
+    "topics": [
+      "Android Development",
+      "iOS Development",
+      "User Interface Design",
+      "Mobile Testing",
+      "App Deployment"
+    ]
+  },
+  {
+    "name": "Cybersecurity Fundamentals",
+    "teacher": "Mr. Steven Scott",
+    "difficulty": "Intermediate",
+    "photo": "../images/courses/course10.webp",
+    "category": "IT",
+    "topics": [
+      "Encryption",
+      "Firewalls",
+      "Malware",
+      "Phishing",
+      "Network Security"
+    ]
+  },
+  {
+    "name": "User Interface Design",
+    "teacher": "Ms. Maria Nelson",
+    "difficulty": "Intermediate",
+    "photo": "../images/courses/course19.webp",
+    "category": "Design",
+    "topics": [
+      "UI Principles",
+      "Wireframing",
+      "Prototyping",
+      "Design Tools",
+      "User Experience (UX)"
+    ]
+  },
+  {
+    "name": "Data Visualization with Python",
+    "teacher": "Mr. Matthew Evans",
+    "difficulty": "Intermediate",
+    "photo": "../images/courses/course11.webp",
+    "category": "IT",
+    "topics": [
+      "Matplotlib",
+      "Seaborn",
+      "Plotly",
+      "Data Storytelling",
+      "Charts and Graphs"
+    ]
+  },
+  {
+    "name": "Introduction to Data Analysis",
+    "teacher": "Prof. Joseph Lewis",
+    "difficulty": "Beginner",
+    "photo": "../images/courses/course12.webp",
+    "category": "IT",
+    "topics": [
+      "Data Collection",
+      "Data Cleaning",
+      "Exploratory Data Analysis",
+      "Data Wrangling",
+      "Basic Statistics"
+    ]
+  },
+  {
+    "name": "Digital Marketing Strategies",
+    "teacher": "Dr. Lisa Roberts",
+    "difficulty": "Beginner",
+    "photo": "../images/courses/course24.webp",
+    "category": "Language",
+    "topics": [
+      "SEO",
+      "Social Media Marketing",
+      "Email Campaigns",
+      "PPC Advertising",
+      "Content Marketing"
+    ]
+  },
+  {
+    "name": "Artificial Neural Networks",
+    "teacher": "Prof. Daniel Moore",
+    "difficulty": "Advanced",
+    "photo": "../images/courses/course13.webp",
+    "category": "IT",
+    "topics": [
+      "Neural Network Architecture",
+      "Backpropagation",
+      "Activation Functions",
+      "Convolutional Neural Networks",
+      "Deep Learning"
+    ]
+  },
+  {
+    "name": "Game Development with Unity",
+    "teacher": "Mr. Benjamin Carter",
+    "difficulty": "Intermediate",
+    "photo": "../images/courses/course14.webp",
+    "category": "IT",
+    "topics": [
+      "Unity Basics",
+      "C# Scripting",
+      "3D Modeling",
+      "Animation",
+      "Game Physics"
+    ]
+  },
+  {
+    "name": "Object-Oriented Programming with Java",
+    "teacher": "Ms. Hannah Green",
+    "difficulty": "Intermediate",
+    "photo": "../images/courses/course15.webp",
+    "category": "IT",
+    "topics": [
+      "Classes and Objects",
+      "Inheritance",
+      "Polymorphism",
+      "Encapsulation",
+      "Java Collections"
+    ]
+  },
+  {
+    "name": "Data Science with R",
+    "teacher": "Dr. Paul Martin",
+    "difficulty": "Intermediate",
+    "photo": "../images/courses/course16.webp",
+    "category": "IT",
+    "topics": [
+      "R Basics",
+      "Data Cleaning",
+      "Data Visualization",
+      "Statistical Analysis",
+      "Predictive Modeling"
+    ]
+  },
+  {
+    "name": "Introduction to Virtual Reality",
+    "teacher": "Prof. Samuel Thomas",
+    "difficulty": "Beginner",
+    "photo": "../images/courses/course20.webp",
+    "category": "Design",
+    "topics": [
+      "VR Basics",
+      "VR Hardware",
+      "VR Development",
+      "Unity for VR",
+      "User Interaction in VR"
+    ]
+  },
+  {
+    "name": "SEO and Content Marketing",
+    "teacher": "Ms. Jennifer Adams",
+    "difficulty": "Beginner",
+    "photo": "../images/courses/course25.webp",
+    "category": "Language",
+    "topics": [
+      "Search Engine Optimization",
+      "Keyword Research",
+      "Content Strategy",
+      "Link Building",
+      "Analytics"
+    ]
+  },
+  {
+    "name": "Business Intelligence and Analytics",
+    "teacher": "Dr. Kenneth Wright",
+    "difficulty": "Intermediate",
+    "photo": "../images/courses/course17.webp",
+    "category": "IT",
+    "topics": [
+      "BI Tools",
+      "Data Warehousing",
+      "Data Modeling",
+      "Reports and Dashboards",
+      "Data Analysis"
+    ]
+  },
+  {
+    "name": "Agile Project Management",
+    "teacher": "Ms. Natalie King",
+    "difficulty": "Intermediate",
+    "photo": "../images/courses/course26.webp",
+    "category": "Language",
+    "topics": [
+      "Agile Principles",
+      "Scrum Framework",
+      "Kanban",
+      "User Stories",
+      "Sprint Planning"
+    ]
+  },
+  {
+    "name": "Deep Learning with Python",
+    "teacher": "Dr. Mark Thompson",
+    "difficulty": "Advanced",
+    "photo": "../images/courses/course18.webp",
+    "category": "IT",
+    "topics": [
+      "Deep Learning Fundamentals",
+      "Neural Networks",
+      "TensorFlow",
+      "Keras",
+      "Convolutional Neural Networks"
+    ]
+  },
+  {
+    "name": "Introduction to Cloud Security",
+    "teacher": "Prof. Steven Allen",
+    "difficulty": "Beginner",
+    "photo": "../images/courses/course1.webp",
+    "category": "IT",
+    "topics": [
+      "Cloud Computing Security",
+      "Identity and Access Management",
+      "Cloud Encryption",
+      "Data Loss Prevention",
+      "Incident Response"
+    ]
+  },
+  {
+    "name": "Introduction to Graphic Design",
+    "teacher": "Ms. Julia Brown",
+    "difficulty": "Beginner",
+    "photo": "../images/courses/course21.webp",
+    "category": "Design",
+    "topics": [
+      "Design Principles",
+      "Typography",
+      "Color Theory",
+      "Adobe Photoshop",
+      "Layout and Composition"
+    ]
+  },
+  {
+    "name": "Photography and Image Editing",
+    "teacher": "Mr. Scott White",
+    "difficulty": "Intermediate",
+    "photo": "../images/courses/course22.webp",
+    "category": "Design",
+    "topics": [
+      "Photography Basics",
+      "Image Composition",
+      "Adobe Lightroom",
+      "Image Retouching",
+      "Photo Editing Techniques"
+    ]
+  },
+  {
+    "name": "Creative Writing for Beginners",
+    "teacher": "Ms. Clara Young",
+    "difficulty": "Beginner",
+    "photo": "../images/courses/course27.webp",
+    "category": "Language",
+    "topics": [
+      "Storytelling",
+      "Character Development",
+      "Plot Structure",
+      "Writing Techniques",
+      "Fiction Writing"
+    ]
+  },
+  {
+    "name": "Interior Design Basics",
+    "teacher": "Ms. Sarah King",
+    "difficulty": "Beginner",
+    "photo": "../images/courses/course23.webp",
+    "category": "Design",
+    "topics": [
+      "Design Principles",
+      "Space Planning",
+      "Color Schemes",
+      "Furniture Arrangement",
+      "Lighting Techniques"
+    ]
+  }
+]

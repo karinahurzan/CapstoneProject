@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>LearnHub</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="head container">
+        <nav class="head-nav">
+          <a href="../../index.html" class="head-logo">LearnHub</a>
+          <ul class="head-list">
+            <li><a href="../../index.html" class="nav-href">Home</a></li>
+            <li>
+              <a href="#" class="nav-href">Courses</a>
+              <ul class="submenu">
+                <li><a href="?category=IT">IT</a></li>
+                <li><a href="?category=Language">Languages</a></li>
+                <li><a href="?category=Design">Design</a></li>
+              </ul>
+            </li>
+            <li><a href="./contacts.html" class="nav-href">Contacts</a></li>
+          </ul>
+        </nav>
+
+        <button class="burger-btn">
+          <svg class="burger-icon" width="28" height="28">
+            <use href="../images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="search container">
+          <h2>Courses search</h2>
+          <form id="search-form">
+            <div class="input-group">
+              <label for="search-title">Course:</label>
+              <input
+                class="search-input"
+                type="text"
+                id="search-title"
+                placeholder="Course name"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="search-instructor">Mentor:</label>
+              <input
+                class="search-input"
+                type="text"
+                id="search-instructor"
+                placeholder="Instructor name"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="search-category">Category:</label>
+              <select id="search-category">
+                <option value="">All categories</option>
+                <option value="IT">IT</option>
+                <option value="Language">Languages</option>
+                <option value="Design">Design</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="search-level">Difficulty:</label>
+              <select id="search-level">
+                <option value="">All difficulties</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="search-sort">Sort By:</label>
+              <select id="search-sort">
+                <option value="">None</option>
+                <option value="name">Course Name</option>
+                <option value="difficulty">Difficulty</option>
+              </select>
+            </div>
+            <button class="clear-button" type="button" id="clear-filters-btn">
+              Clear filters
+            </button>
+            <button class="search-button" type="submit">Search</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="courses">
+        <div class="container">
+          <h2 class="courses-header">Our courses</h2>
+
+          <ul class="course-list"></ul>
+
+          <div id="pagination-controls" class="pagination-controls"></div>
+
+          <button id="show-more-btn" style="display: none">Show More</button>
+        </div>
+      </section>
+
+      <div class="modal-overlay" data-menu>
+        <div class="modal">
+          <div class="modal-header">
+            <div class="modal-header-menu">
+              <a href="../../index.html" class="modal-logo">LearnHub</a>
+              <button type="button" class="modal-burger-button">
+                <svg class="burger-icon-menu" width="28" height="28">
+                  <use href="../images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <nav class="modal-nav">
+            <ul class="modal-nav-list">
+              <li>
+                <a href="../../index.html" class="modal-nav-link menu-list-item"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <button type="button" class="modal-nav-link courses-button">
+                  Courses
+                </button>
+                <ul class="modal-submenu">
+                  <li>
+                    <a class="menu-list-item" href="#">All courses</a>
+                  </li>
+                  <li>
+                    <a class="menu-list-item" href="?category=IT">IT</a>
+                  </li>
+                  <li>
+                    <a class="menu-list-item" href="?category=Language"
+                      >Languages</a
+                    >
+                  </li>
+                  <li>
+                    <a class="menu-list-item" href="?category=Design">Design</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="./contacts.html" class="modal-nav-link menu-list-item"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <div class="footer container">
+        <p class="footer-text">&copy; 2025 LearnHub</p>
+      </div>
+    </footer>
+
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/script.js"></script>
+  </body>
+</html>

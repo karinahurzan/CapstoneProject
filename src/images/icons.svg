@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <symbol id="icon-close" viewBox="0 0 32 32">
+      <path
+        d="M7.934 7.934 6.88 8.987l7.013 7.014-7.013 7.014 1.054 1.053 1.053 1.054 7.014-7.013 7.014 7.013 1.053-1.054 1.054-1.053-7.013-7.014 7.013-7.014-1.054-1.053-1.053-1.054-7.014 7.013L8.987 6.88 7.934 7.934z" />
+    </symbol>
+    <symbol id="icon-burger" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.857" d="M4 20h24M4 12h24" />
+    </symbol>
+  </defs>
+</svg>

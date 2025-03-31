@@ -1,0 +1,691 @@
+// ==========================
+// VARIABLES
+// ==========================
+$font: "Roboto", sans-serif;
+$color: #302924;
+$other-color: #fbfbfb;
+
+// ==========================
+// BASE STYLES
+// ==========================
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: $font;
+  font-style: normal;
+  color: $color;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentcolor;
+  text-decoration: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+// ==========================
+// UTILITY CLASSES
+// ==========================
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// ==========================
+// LAYOUT
+// ==========================
+.section {
+  padding: 40px 0;
+
+  @media screen and (width >= 768px) {
+    padding: 75px 0;
+  }
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media screen and (width >= 768px) {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  @media screen and (width >= 1280px) {
+    max-width: 1280px;
+    padding: 0 50px;
+  }
+}
+
+// ==========================
+// HEADER
+// ==========================
+.header {
+  padding: 20px 0;
+  background-color: $color;
+
+  .head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-logo {
+      font-weight: 500;
+      font-size: 20px;
+      color: $other-color;
+
+      @media screen and (width >= 768px) {
+        font-size: 24px;
+      }
+    }
+
+    &-list {
+      display: none;
+
+      @media screen and (width >= 768px) {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+
+        li {
+          position: relative;
+
+          .nav-href {
+            display: block;
+            padding: 15px 20px;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.3s;
+
+            &:hover {
+              background-color: #444;
+            }
+          }
+
+          .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            min-width: 150px;
+            flex-direction: column;
+            z-index: 10;
+
+            li a {
+              display: block;
+              padding: 10px 15px;
+              color: #fff;
+              text-decoration: none;
+
+              &:hover {
+                background-color: #555;
+              }
+            }
+          }
+
+          &:hover .submenu {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    &-nav {
+      @media screen and (width >= 768px) {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.burger-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (width >= 768px) {
+    display: none;
+  }
+}
+
+.burger-icon {
+  stroke: $other-color;
+}
+
+.nav-href {
+  @media screen and (width >= 768px) {
+    color: $other-color;
+  }
+}
+
+// ==========================
+// SLIDER (SWIPER)
+// ==========================
+.slider-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+
+  @media screen and (width >= 768px) {
+    max-height: 300px;
+  }
+
+  @media screen and (width >= 1280px) {
+    max-height: 400px;
+  }
+}
+
+.swiper-header {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 15px;
+  font-size: 20px;
+
+  @media screen and (width >= 768px) {
+    margin-bottom: 35px;
+    font-size: 26px;
+  }
+
+  @media screen and (width >= 1280px) {
+    margin-bottom: 55px;
+    font-size: 36px;
+  }
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  position: relative;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: $other-color;
+  outline: transparent;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  min-width: 30px;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: $color;
+    color: $other-color;
+  }
+}
+
+// ==========================
+// FOOTER
+// ==========================
+.foot {
+  margin-top: auto;
+  margin-bottom: 0;
+  background-color: $color;
+  padding: 25px 0;
+}
+
+.footer-text {
+  color: $other-color;
+  font-size: 16px;
+  text-align: center;
+}
+
+// ==========================
+// SEARCH
+// ==========================
+.search {
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &-input,
+  #search-level,
+  #search-category,
+  #search-sort {
+    background-color: transparent;
+    outline: transparent;
+    border: 1px solid $color;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14px;
+
+    &::placeholder {
+      font-family: $font;
+      font-size: 14px;
+      background: transparent;
+    }
+  }
+
+  &-button {
+    background-color: $other-color;
+    outline: transparent;
+    border: 1px solid $color;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14px;
+    max-width: 100px;
+    transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: $color;
+      color: $other-color;
+    }
+  }
+}
+
+.clear-button {
+  background-color: $other-color;
+  outline: transparent;
+  border: 1px solid $color;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px;
+  max-width: 100px;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+}
+
+.clear-button:hover,
+.clear-button:focus {
+  background-color: $color;
+  color: $other-color;
+}
+
+// ==========================
+// COURSES LIST
+// ==========================
+.courses-header {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+
+  @media screen and (width >= 768px) {
+    flex-flow: row wrap;
+  }
+
+  @media screen and (width >= 1280px) {
+    gap: 25px;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid $color;
+    border-radius: 5px;
+    padding: 15px 0;
+    min-height: 520px;
+    width: 100%;
+
+    @media screen and (width >= 768px) {
+      flex-basis: calc((100% - 15px) / 2);
+    }
+
+    @media screen and (width >= 1280px) {
+      flex-basis: calc((100% - 50px) / 3);
+    }
+
+    .course-info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    img {
+      max-width: 300px;
+      min-height: 300px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 5px;
+    }
+  }
+}
+
+// ==========================
+// SHOW MORE BUTTON
+// ==========================
+#show-more-btn {
+  display: block;
+  margin: 0 auto 15px;
+  background-color: $other-color;
+  outline: transparent;
+  border: 1px solid $color;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px;
+  min-width: 100px;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: $color;
+    color: $other-color;
+  }
+}
+
+// ==========================
+// PAGINATION
+// ==========================
+.pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+
+  li {
+    border: 1px solid #999;
+    padding: 6px 12px;
+    cursor: pointer;
+    user-select: none;
+
+    &.active {
+      background-color: #333;
+      color: #fff;
+      border-color: #333;
+    }
+  }
+
+  &-controls {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      max-width: 40px;
+      max-height: 40px;
+      border: 1px solid $color;
+      background-color: transparent;
+      font-family: $font;
+      font-size: 20px;
+      border-radius: 5px;
+      color: $color;
+      transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+    }
+
+    button:hover,
+    button:focus {
+      background-color: $color;
+      color: $other-color;
+    }
+  }
+}
+
+// ==========================
+// MODAL
+// ==========================
+
+.modal {
+  background-color: $color;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 300ms ease-in-out;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  .modal-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    z-index: 999;
+
+    .modal-header-menu {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+
+      .modal-logo {
+        font-weight: 500;
+        font-size: 20px;
+        color: $other-color;
+
+        @media screen and (width >= 768px) {
+          font-size: 24px;
+        }
+      }
+
+      .modal-burger-button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          fill: $other-color;
+        }
+      }
+    }
+  }
+
+  .modal-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 150px;
+
+    .modal-nav-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 105px;
+
+      li {
+        position: relative;
+
+        .modal-nav-link {
+          padding: 15px 20px;
+          color: #fff;
+          text-decoration: none;
+          transition: background 0.3s;
+          display: flex;
+          justify-content: flex-start;
+          background-color: transparent;
+          align-items: center;
+          border: none;
+          width: 100%;
+
+          &:hover {
+            background-color: #444;
+          }
+        }
+
+        .modal-submenu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #444;
+          min-width: 150px;
+          flex-direction: column;
+          z-index: 10;
+
+          li a {
+            display: block;
+            padding: 10px 15px;
+            color: #fff;
+            text-decoration: none;
+
+            &:hover {
+              background-color: #555;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0e1823;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 300ms ease-in-out;
+}
+
+// ==========================
+// MAP
+// ==========================
+
+#map {
+  min-height: 400px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+  z-index: 1;
+}
+
+.map-container {
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+}
