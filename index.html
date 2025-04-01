@@ -29,17 +29,25 @@
             <li>
               <a href="./src/partials/courses.html" class="nav-href">Courses</a>
               <ul class="submenu">
-                <li><a href="./src/partials/courses.html?category=IT">IT</a></li>
                 <li>
-                  <a href="./src/partials/courses.html?category=Language">Languages</a>
+                  <a href="./src/partials/courses.html?category=IT">IT</a>
                 </li>
                 <li>
-                  <a href="./src/partials/courses.html?category=Design">Design</a>
+                  <a href="./src/partials/courses.html?category=Language"
+                    >Languages</a
+                  >
+                </li>
+                <li>
+                  <a href="./src/partials/courses.html?category=Design"
+                    >Design</a
+                  >
                 </li>
               </ul>
             </li>
             <li>
-              <a href="./src/partials/contacts.html" class="nav-href">Contacts</a>
+              <a href="./src/partials/contacts.html" class="nav-href"
+                >Contacts</a
+              >
             </li>
           </ul>
         </nav>
@@ -60,26 +68,65 @@
             <div class="slider">
               <div class="slide">
                 <picture>
-                  <source media="(min-width: 1280px)" srcset="./src/images/slider/slide-photo-desc.jpg" />
-                  <source media="(min-width: 768px)" srcset="./src/images/slider/slide-photo-tab.jpg" />
-                  <source media="(min-width: 375px)" srcset="./src/images/slider/slide-photo-mob.jpg" />
-                  <img src="./src/images/slider/slide-photo-mob.jpg" alt="Slider Photo" class="slider-img" />
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="./src/images/slider/slide-photo-desc.jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./src/images/slider/slide-photo-tab.jpg"
+                  />
+                  <source
+                    media="(min-width: 375px)"
+                    srcset="./src/images/slider/slide-photo-mob.jpg"
+                  />
+                  <img
+                    src="./src/images/slider/slide-photo-mob.jpg"
+                    alt="Slider Photo"
+                    class="slider-img"
+                  />
                 </picture>
               </div>
               <div class="slide">
                 <picture>
-                  <source media="(min-width: 1280px)" srcset="./src/images/slider/slide-photo-desc1.jpg" />
-                  <source media="(min-width: 768px)" srcset="./src/images/slider/slide-photo-tab1.jpg" />
-                  <source media="(min-width: 375px)" srcset="./src/images/slider/slide-photo-mob1.jpg" />
-                  <img src="./src/images/slider/slide-photo-mob1.jpg" alt="Slider Photo" class="slider-img" />
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="./src/images/slider/slide-photo-desc1.jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./src/images/slider/slide-photo-tab1.jpg"
+                  />
+                  <source
+                    media="(min-width: 375px)"
+                    srcset="./src/images/slider/slide-photo-mob1.jpg"
+                  />
+                  <img
+                    src="./src/images/slider/slide-photo-mob1.jpg"
+                    alt="Slider Photo"
+                    class="slider-img"
+                  />
                 </picture>
               </div>
               <div class="slide">
                 <picture>
-                  <source media="(min-width: 1280px)" srcset="./src/images/slider/slide-photo-desc2.jpg" />
-                  <source media="(min-width: 768px)" srcset="./src/images/slider/slide-photo-tab2.jpg" />
-                  <source media="(min-width: 375px)" srcset="./src/images/slider/slide-photo-mob2.jpg" />
-                  <img src="./src/images/slider/slide-photo-mob2.jpg" alt="Slider Photo" class="slider-img" />
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="./src/images/slider/slide-photo-desc2.jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./src/images/slider/slide-photo-tab2.jpg"
+                  />
+                  <source
+                    media="(min-width: 375px)"
+                    srcset="./src/images/slider/slide-photo-mob2.jpg"
+                  />
+                  <img
+                    src="./src/images/slider/slide-photo-mob2.jpg"
+                    alt="Slider Photo"
+                    class="slider-img"
+                  />
                 </picture>
               </div>
             </div>
@@ -88,6 +135,57 @@
           </div>
         </div>
       </section>
+
+      <div class="modal-overlay" data-menu>
+        <div class="modal">
+          <div class="modal-header">
+            <div class="modal-header-menu">
+              <a href="/index.html" class="modal-logo">LearnHub</a>
+              <button type="button" class="modal-burger-button">
+                <svg class="burger-icon-menu" width="28" height="28">
+                  <use href="./src/images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <nav class="modal-nav">
+            <ul class="modal-nav-list">
+              <li>
+                <a href="/index.html" class="modal-nav-link menu-list-item"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <button type="button" class="modal-nav-link courses-button">
+                  Courses
+                </button>
+                <ul class="modal-submenu">
+                  <li>
+                    <a class="menu-list-item" href="./src/partials/courses.html">All courses</a>
+                  </li>
+                  <li>
+                    <a class="menu-list-item" href="./src/partials/courses.html?category=IT">IT</a>
+                  </li>
+                  <li>
+                    <a class="menu-list-item" href="./src/partials/courses.html?category=Language"
+                      >Languages</a
+                    >
+                  </li>
+                  <li>
+                    <a class="menu-list-item" href="./src/partials/courses.html?category=Design">Design</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="./src/partials/contacts.html" class="modal-nav-link menu-list-item"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </main>
 
     <footer class="foot">
@@ -96,6 +194,6 @@
       </div>
     </footer>
     <script type="module" src="./src/js/slider.js"></script>
-    <script type="module" src="./src/js/menu.js"></script>
+    <script type="module" src="./src/js/menu.js" defer></script>
   </body>
 </html>
