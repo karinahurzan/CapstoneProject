@@ -30,6 +30,6 @@
     "stylelint-scss": "^6.11.1"
   },
   "dependencies": {
-    "swiper": "^11.2.8"
+    "swiper": "^11.2.10"
   }
 }
